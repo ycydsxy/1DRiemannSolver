@@ -41,7 +41,7 @@ end
 fun=@(p_star)f_function(p_star,p_1,rho_1)+f_function(p_star,p_2,rho_2)-delta_u;
 [p_star,fval]=fsolve(fun,0.5*(p_1+p_2),optimset('Display','off'));
 u_star=0.5*(u_1+u_2+f_function(p_star,p_2,rho_2)-f_function(p_star,p_1,rho_1));
-fprintf('fval = %.4e\n',fval);
+% fprintf('fval = %.4e\n',fval);
 
 % constant parameters
 T_1=p_1/R/rho_1;% ideal gas
@@ -85,7 +85,7 @@ switch condition % computing right wave
         z_2t=u_2+2/(gamma-1)/c_2;
 end
 
-fprintf('[p* u* rho1* rho2*]=[%.5f %.5f %.5f %.5f]\n',p_star,u_star,rho_1_star,rho_2_star);
+%fprintf('[p* u* rho1* rho2*]=[%.5f %.5f %.5f %.5f]\n',p_star,u_star,rho_1_star,rho_2_star);
 
 x=0;
 

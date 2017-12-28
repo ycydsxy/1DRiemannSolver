@@ -5,7 +5,6 @@ function [ S ] = initialize( N,n_0,index )
 %   index: TEST index
 %   S: [rho u p]
 
-
 switch index
     case 1
         S_l=[1,0,1];
@@ -24,6 +23,7 @@ switch index
         S_r=[5.99242,-6.19633,46.0950];
 end
 
+S=zeros(N,3);
 for i=1:N
     if i<=n_0
         S(i,:)=S_l;

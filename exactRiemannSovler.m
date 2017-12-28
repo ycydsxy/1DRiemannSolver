@@ -1,9 +1,10 @@
-function result = exactRiemannSovler( S_l,S_r,x,t)
+function result = exactRiemannSovler( S_l,S_r,x,t,x_0)
 % Solving Riemann Problem using Analytic Method
 %   S_l: [rho_1,u_1,p_1]
 %   S_r: [rho_2,u_2,p_2]
 %   x: x=linspace(-1,1,N)
 %   t: total time
+%   x_0: discontinuity surface location
 %   result: [ rho u p ];
 
 global gamma R;
@@ -93,7 +94,7 @@ p=zeros(N,1);
 rho=zeros(N,1);
 
 for i=1:N
-    x_i=x(i);
+    x_i=x(i)-x_0;
     if x_i<z_1h*t
         u(i)=u_1;
         p(i)=p_1;
