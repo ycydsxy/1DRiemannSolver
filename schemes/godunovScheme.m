@@ -39,7 +39,7 @@ end
 
 %solving equation using Newton Method
 fun=@(p_star)f_function(p_star,p_1,rho_1)+f_function(p_star,p_2,rho_2)-delta_u;
-[p_star,fval]=fsolve(fun,0.5*(p_1+p_2),optimset('Display','off'));
+[p_star,fval]=fsolve(fun,0.5*(p_1+p_2),optimset('Display','off','TolFun',1e-10));
 u_star=0.5*(u_1+u_2+f_function(p_star,p_2,rho_2)-f_function(p_star,p_1,rho_1));
 % fprintf('fval = %.4e\n',fval);
 

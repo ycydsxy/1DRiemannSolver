@@ -11,7 +11,10 @@ m=Q(:,3);
 
 rho=s;
 u=t./s;
-p=(gamma-1).*m;
+p=(gamma-1)*(m-0.5.*rho.*u.^2);
+
+% rho=0.5*(abs(rho)+rho);
+% p=0.5*(abs(p)+p);
 
 S=[rho,u,p];
 

@@ -11,14 +11,14 @@ S_r=Q2S(Q_r);
 F_l=S2F(S_l);
 F_r=S2F(S_r);
 
-rho_1=S_l(:,1);
-u_1=S_l(:,2);
-p_1=S_l(:,3);
-h_1=gamma/(gamma-1)*p_1/rho_1;
-rho_2=S_r(:,1);
-u_2=S_r(:,2);
-p_2=S_r(:,3);
-h_2=gamma/(gamma-1)*p_2/rho_2;
+rho_1=S_l(1);
+u_1=S_l(2);
+p_1=S_l(3);
+h_1=gamma/(gamma-1)*p_1/rho_1+0.5*u_1^2;
+rho_2=S_r(1);
+u_2=S_r(2);
+p_2=S_r(3);
+h_2=gamma/(gamma-1)*p_2/rho_2+0.5*u_2^2;
 
 D=sqrt(rho_2/rho_1);
 u=(D*u_2+u_1)/(D+1);

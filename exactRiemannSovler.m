@@ -87,7 +87,7 @@ end
 
 fprintf('[p* u* rho1* rho2*]=[%.5f %.5f %.5f %.5f]\n',p_star,u_star,rho_1_star,rho_2_star);
 
-% computing parameters from (-1,t) to (1,t)
+% computing parameters from (x_min,t) to (x_max,t)
 N=length(x);
 u=zeros(N,1);
 p=zeros(N,1);
