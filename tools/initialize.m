@@ -7,7 +7,7 @@ function [ S ] = initialize( N,n_0,index )
 
 switch index
     case 1
-        S_l=[1,0,1];
+        S_l=[1,0.75,1];
         S_r=[0.125,0,0.1];
     case 2
         S_l=[1,-2,0.4];
